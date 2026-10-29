@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="agentify-repo — make any repository agent-ready" width="100%">
+  <img src="assets/banner.svg" alt="Agentify-Repo — make any repository agent-ready" width="100%">
 </p>
 
 <p align="center">
@@ -25,7 +25,7 @@ Most `AGENTS.md` / `CLAUDE.md` files are either missing or full of things an age
 - the **traps**: tests that need a seeded database, scripts that write outside the repo, config defaults pointing at real servers
 - the **boundaries and decisions** you can't see in the code
 
-`agentify-repo` documents only that. **Every line has a source**: either the agent ran it and it passed, or the text says where the claim comes from (`from config`, `from code`, `from docs`, `from tests`, `from user`).
+`Agentify-Repo` documents only that. **Every line has a source**: either the agent ran it and it passed, or the text says where the claim comes from (`from config`, `from code`, `from docs`, `from tests`, `from user`).
 
 ## What you get
 
@@ -116,10 +116,10 @@ Clone the repo into your agent's skills directory:
 
 ```bash
 # Claude Code (personal skills)
-git clone https://github.com/AdalbertoCV/agentify-repo ~/.claude/skills/agentify-repo
+git clone https://github.com/AdalbertoCV/Agentify-Repo ~/.claude/skills/agentify-repo
 
 # Cross-agent location used by several tools
-git clone https://github.com/AdalbertoCV/agentify-repo ~/.agents/skills/agentify-repo
+git clone https://github.com/AdalbertoCV/Agentify-Repo ~/.agents/skills/agentify-repo
 ```
 
 Then, inside any repository, ask your agent:
@@ -144,7 +144,7 @@ to install this skill. `py` may be used only if it resolves to a working interpr
 $skillPath = Join-Path $HOME '.agents/skills/agentify-repo'
 if (Test-Path -LiteralPath $skillPath) { throw 'Skill already exists; inspect it before updating.' }
 New-Item -ItemType Directory -Force -Path (Split-Path $skillPath) | Out-Null
-git clone https://github.com/AdalbertoCV/agentify-repo $skillPath
+git clone https://github.com/AdalbertoCV/Agentify-Repo $skillPath
 ```
 
 **Project installation (this project only):** run the following from the target
@@ -152,7 +152,7 @@ project root instead of performing the personal installation:
 
 ```powershell
 New-Item -ItemType Directory -Force -Path .agents/skills | Out-Null
-git clone https://github.com/AdalbertoCV/agentify-repo .agents/skills/agentify-repo
+git clone https://github.com/AdalbertoCV/Agentify-Repo .agents/skills/agentify-repo
 ```
 
 Keep one installation per scope to avoid duplicate skill names. A project-local
@@ -297,7 +297,7 @@ secrets). They do not require Docker, services, or a live coding-agent session.
 - [x] `--brain` mode: a routed `docs/agents/` context brain, scaffolded from a mini scan
 - [ ] `--refresh` mode: re-verify an existing `AGENTS.md` and report drift (e.g. on a schedule)
 
-Have a repo where it gets something wrong? [Open an issue](https://github.com/AdalbertoCV/agentify-repo/issues). A short description of the stack and the bad line is the most useful bug report there is.
+Have a repo where it gets something wrong? [Open an issue](https://github.com/AdalbertoCV/Agentify-Repo/issues). A short description of the stack and the bad line is the most useful bug report there is.
 
 ## Contributing
 
